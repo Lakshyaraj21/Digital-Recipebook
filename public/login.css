@@ -1,0 +1,95 @@
+body {
+  background-image: url('bgimg.jpg');
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.477);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  height: 100%;
+  width: 50%;
+  vertical-align: center;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title-text{
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+.digichef{
+  font-family:'Lato';
+  font-weight: bolder;
+  font-size: 100px;
+  margin: auto;
+}
+h3{
+  font-family: 'Roboto';
+  font-size: 30px;
+  margin: auto;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  vertical-align: center + 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="password"] {
+  width: calc(100%);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: cubic-bezier(0.4, 0.1, 0.75, 0.2);
+  background-color: #00d924;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}

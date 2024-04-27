@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="loginController">
+<div class="container">
+  <h2>Login</h2>
+  <form ng-submit="submitForm()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" ng-model="formData.username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" ng-model="formData.password" required>
+    </div>
+    <div class="form-group">
+      <label for="remember">Remember me:</label>
+      <input type="checkbox" id="remember" name="remember" ng-model="formData.remember">
+    </div>
+    <div class="form-group">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  angular.module('loginApp', [])
+    .controller('loginController', function($scope, $window) {
+      $scope.formData = {};
+      $scope.submitForm = function() {
+        // Your form submission logic here
+        console.log('Form submitted with data:', $scope.formData);
+        // For demonstration purposes, simulate a successful login
+        // Replace this with your actual login logic
+        if ($scope.formData.username === 'admin' && $scope.formData.password === '12345678') {
+          // Redirect to the server route that renders the index.ejs template
+          $window.location.href = '/index';
+        } else {
+          alert('Invalid username or password');
+        }        
+        // Reset the form after submission
+        $scope.formData = {};
+      };
+    });
+</script>
+</body>
+</html>

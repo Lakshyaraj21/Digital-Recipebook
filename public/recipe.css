@@ -1,0 +1,88 @@
+.light{
+    background-color: beige;
+   }
+
+/* RECIPE */
+body{
+    margin: 70px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:20px;
+  }
+  .search{
+    transform: translate(-50px,0);
+    font-size: 19px;
+  }
+  .search-button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .search-box {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+   a{
+    font-size: 20px;
+    text-decoration: none;
+    color:rgb(219, 169, 121);
+  }
+  a:hover{
+    color: purple;
+
+  }
+  .main{
+    margin-top: 70px;
+  }
+  ul li{
+    display: flex;
+    justify-content: space-between;
+  }
+  .large-font{
+    font-size:xx-large;
+  }
+  .top-20{
+    position:relative;
+   
+ }
+  li .add.active{
+    animation:like 0.5s 1;
+    fill:red;
+    stroke:none;
+  }
+  li .add{
+    fill:white;
+    stroke:black;
+    stroke-width:10;
+    transition:all 0.5s;
+    transform: translate(0,-2px);
+  }
+  .heart{
+    fill: red;
+ }
+ .wishlist{
+    transform: translate(-100px,13px);
+ }
+ .wishlist p{
+    transform: translate(-8px,0);
+    font-size: 15px;
+    font-weight: 400;
+ }
+  
+  
+  @keyframes like {
+    0%   { transform: scale(1); }
+    90%   { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+  }

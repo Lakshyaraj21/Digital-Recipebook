@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="html" data-bs-theme="#orange-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiChef</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="body light">
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <img src="preview.png" height="80px" style="border: 2px solid black; border-radius:50%; " >
+          </div>
+          <div class="tab-list ">
+          <ul class="all-tabs">
+            <li><a href="index.ejs" class="nav-link px-2 home">Home</a></li>
+            <li><a href="price.ejs" class="nav-link px-2 tab">Pricing</a></li>
+            <li><a href="recipe.ejs" class="nav-link px-2 tab">Recipe</a></li>
+            <li><a href="about.ejs" class="nav-link px-2 tab">About</a></li>
+          </ul>
+        </div>
+    
+          <div class="col-md-3 text-end login">
+           <a href="./login.ejs"><button type="button" class="btn btn-outline-dark me-2">Login</button></a>
+            <div class="btn-group mx-3">
+            
+            <button type="button" class="btn btn-outline-dark sun">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sunrise-fill" viewBox="0 0 16 16">
+                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+              </svg>
+                <span class="visually-hidden">Button</span>
+              </button>
+              <button type="button" class="btn btn-outline-dark moon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"></path>
+<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"></path>
+</svg>
+                <span class="visually-hidden">Button</span>
+              </button>
+            </div>
+            </div>
+
+            <div class="wishlist">
+              <a href="#"><ion-icon name="heart" class="heart large-font">
+                <div class='red-bg'></div>
+              </ion-icon></a>
+              <p>Wishlist</p>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" class="text-decoration-none">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <button onclick="myFunction()" class="dropbtn dropdown-toggle"> 
+              </button>
+              <div class="dropdown-content" id="myDropDown">
+                <a href="#">Add New Recipe</a>
+                <a href="#">Settings</a>
+                <a href="#">Profile</a>
+                <a href="#">Sign Out</a>
+                
+              </div>
+            </div> 
+            <button type="button" class="mobile">
+              <i class="fas fa-align-justify"></i>
+            </button>
+          
+        </header>
+
+        <section class="middle-container">
+          <div class="box">
+          <div class="title">
+            <img src="pexels-yaroslav-shuraev-8844888.jpg" alt="food" class="food">
+          </div>
+            <div class="title-text">
+              <h4 style="font-family: 'Roboto';font-size: 20px;font-weight: lighter;margin: auto;">Welcome to</h4>
+              <h1 class="digichef"><span class="title-span">Digi</span>Chef</h1>
+              <p>where</p>
+              <h3>Anyone Can <span class="title-span">Cook</span></h3>
+            </div>
+           
+          </div>
+          <div class="second-box">
+            <h1 class="heading">Category</h1>
+            <div class="category">
+              <div class="meat type">
+              <img src="category-icons/meat.gif" alt="meat" height="150px" class="type-img">
+              <p class="food-text">Meat</p>
+            </div>
+              <div class="veg type"><img src="category-icons/broccoli.gif" alt="veg" height="150px" class="type-img">
+              <p class="food-text">Veg</p></div>
+              <div class="dessert type">
+              <img src="category-icons/cake.gif" alt="dessert" height="150px" class="type-img"> 
+              <p class="food-text">Dessert</p></div>
+              <div class="breakfast type"><img src="category-icons/eggs.gif" alt="breakfast" height="150px" class="type-img">
+              <p class="food-text type">Breakfast</p></div>
+              <div class="lunch type"><img src="category-icons/lunch-box.gif" alt="lunch" height="150px" class="type-img">
+              <p class="food-text">Lunch</p></div>
+              <div class="dinner type"><img src="category-icons/dinner.gif" alt="dinner" height="150px" class="type-img">
+              <p class="food-text">Dinner</p></div>
+            </div>
+          </div>
+          <div class="third-box">
+            <h1 class="heading">Popular Recipes</h1>
+            <div class="popular-recipes">
+              <div class="recipe">
+                <img src="items/butter chicken.jpg" alt="butter chicken" height="250px" class="item">
+                <h5 class="item-name">Butter Chicken</h5>
+                <div class="para">
+                  <p class="description">A rich Indian dish featuring tender chicken in a creamy tomato-based sauce, flavored with spices and butter.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">Approx 2hrs</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/omurice.jpg" height="250px" alt="omurice" class="item">
+                <h5 class="item-name">Omurice</h5>
+                <div class="para">
+                  <p class="description"> A Japanese dish of seasoned fried rice wrapped in a fluffy omelette, often topped with ketchup or a savory sauce.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">30-40min</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/burrito.jpg" height="250px" alt="burrito" class="item">
+                <h5 class="item-name">Burrito</h5>
+                <div class="para">
+                <p class="description">A Mexican meal consisting of a flour tortilla filled with beans, rice, meat, cheese, and toppings, rolled into a portable package.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">20-45min</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/burger.jpg" height="250px" alt="burger" class="item">
+                <h5 class="item-name">Cheeseburger</h5>
+                <div class="para">
+                <p class="description">A classic sandwich comprising a cooked ground meat patty served in a bun, often topped with condiments and vegetables.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">15-20min</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/cookies.jpg" height="250px" alt="cookies" class="item">
+                <h5 class="item-name">Cookies</h5>
+                <div class="para">
+                  <p class="description"> Sweet baked treats made from a dough of flour, sugar, butter, and eggs, often with added chocolate chips or nuts.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">1-1.5hrs</h5>
+                  
+
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/pizza.jpg" height="250px" alt="pizza" class="item">
+                <h5 class="item-name">Neapolitan Pizza</h5>
+                <div class="para">
+                  <p class="description">A traditional Italian pizza with a thin crust, topped with San Marzano tomatoes, fresh mozzarella, basil, and olive oil, baked quickly in a wood-fired oven.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">30min</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/pancake.jpg" height="250px" alt="pancake" class="item">
+                <h5 class="item-name">Pancakes</h5>
+                <div class="para">
+                  <p class="description">Fluffy breakfast cakes made from a batter of flour, milk, eggs, and baking powder, cooked on a griddle and served with syrup and butter.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">10-15min</h5>
+              </div>
+              <!-- wishlist button -->
+            <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+            <!-- end -->
+              </div>
+              <div class="recipe">
+                <img src="items/tacos.jpg" height="250px" alt="tacos" class="item">
+                <h5 class="item-name">Tacos</h5>
+                <div class="para">
+                  <p class="description">Mexican street food consisting of folded or rolled tortillas filled with a variety of savory ingredients such as meat, beans, cheese, and fresh toppings.</p></div>
+                <div class="prep-time">
+                <img src="timer.png" alt="timer" class="time-icon">
+                <h5 class="time">30-35min</h5>
+              </div>
+              <!-- wishlist button -->
+       
+              <div class='large-font text-center top-20'>
+              <ion-icon name="heart" class="add">
+                <div class='red-bg'></div>
+              </ion-icon>
+            </div>
+        
+            <!-- end --> 
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+              <span class="dot" onclick="currentSlide(7)"></span>
+              <span class="dot" onclick="currentSlide(8)"></span>
+
+
+
+            </div>
+          </div>
+          
+        </section>
+      </div>
+      <section class="footer">
+        <footer>
+          <div class="end">
+            <a href="#">Contact Us</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">Github</a>
+        </div>
+        </footer>
+      </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap>@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c0d56dbc26.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="script.js" charset="UTF-8"></script>
+</body>
+</html> 
